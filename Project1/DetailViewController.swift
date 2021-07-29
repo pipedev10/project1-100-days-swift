@@ -10,11 +10,13 @@ import UIKit
 class DetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     var selectedImage: String?
+    var pageNumber = 0
+    var totalPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = selectedImage
+        title = "Picture \(pageNumber) of \(totalPage)"
         navigationItem.largeTitleDisplayMode = .never
         
         if let imageToLoad = selectedImage {
